@@ -1,0 +1,1 @@
+# Questo file non registra più modelli poiché l'uso di djongo è stato rimosso.
