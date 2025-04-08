@@ -4,7 +4,7 @@ const Activities = () => {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('https://solid-zebra-6996vqv59x94c4544-8000.app.github.dev/api/activities')
+    fetch('https://solid-zebra-6996vqv59x94c4544-8000.app.github.dev/api/activities/')
       .then(response => response.json())
       .then(data => setActivities(data));
   }, []);
