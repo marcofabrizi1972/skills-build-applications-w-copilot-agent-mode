@@ -4,7 +4,7 @@ const Leaderboard = () => {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch('https://solid-zebra-6996vqv59x94c4544-8000.app.github.dev/api/leaderboard')
+    fetch('https://solid-zebra-6996vqv59x94c4544-8000.app.github.dev/api/leaderboard/')
       .then(response => response.json())
       .then(data => setLeaderboard(data));
   }, []);

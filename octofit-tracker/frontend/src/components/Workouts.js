@@ -4,7 +4,7 @@ const Workouts = () => {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-    fetch('https://solid-zebra-6996vqv59x94c4544-8000.app.github.dev/api/workouts')
+    fetch('https://solid-zebra-6996vqv59x94c4544-8000.app.github.dev/api/workouts/')
       .then(response => response.json())
       .then(data => setWorkouts(data));
   }, []);
