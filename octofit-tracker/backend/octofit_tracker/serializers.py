@@ -8,6 +8,7 @@ class ObjectIdField:
     def to_internal_value(self, data):
         return ObjectId(data)
 
+
 class UserSerializer:
     def __init__(self, many=False):
         self.many = many
@@ -19,18 +20,22 @@ class UserSerializer:
         fields = '__all__'
 
 class TeamSerializer:
+
     _id = ObjectIdField()
     members = UserSerializer(many=True)
 
     class Meta:
+
         model = Team
         fields = '__all__'
 
 class ActivitySerializer:
+
     _id = ObjectIdField()
     user = ObjectIdField()
 
     class Meta:
+
         model = Activity
         fields = '__all__'
 
