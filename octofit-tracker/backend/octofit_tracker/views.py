@@ -2,6 +2,7 @@ from django.views import View
 from django.http import JsonResponse
 from .models import User, Team, Activity, Leaderboard, Workout
 
+#create a root endpoint that returns the available endpoints
 def api_root(request):
     return JsonResponse({
         "users": "/users/",
