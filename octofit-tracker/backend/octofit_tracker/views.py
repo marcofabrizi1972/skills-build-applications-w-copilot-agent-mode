@@ -1,15 +1,17 @@
 from django.views import View
 from django.http import JsonResponse
+from django.conf import settings
 from .models import User, Team, Activity, Leaderboard, Workout
 
 #create a root endpoint that returns the available endpoints
 def api_root(request):
+    base_url = "https://solid-zebra-6996vqv59x94c4544-8000.app.github.dev"
     return JsonResponse({
-        "users": "/users/",
-        "teams": "/teams/",
-        "activities": "/activities/",
-        "leaderboard": "/leaderboard/",
-        "workouts": "/workouts/",
+        "users": f"{base_url}/users/",
+        "teams": f"{base_url}/teams/",
+        "activities": f"{base_url}/activities/",
+        "leaderboard": f"{base_url}/leaderboard/",
+        "workouts": f"{base_url}/workouts/",
     })
 
 class UserView(View):
